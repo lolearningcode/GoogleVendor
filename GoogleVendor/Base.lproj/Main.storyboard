@@ -203,21 +203,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-CD-hbo">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5a-ip-gTB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-CD-hbo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ngh-CD-hbo" secondAttribute="trailing" id="DPA-R0-46N"/>
+                                    <constraint firstItem="Ngh-CD-hbo" firstAttribute="centerY" secondItem="K5a-ip-gTB" secondAttribute="centerY" id="GbP-LV-yRe"/>
+                                    <constraint firstItem="Ngh-CD-hbo" firstAttribute="centerX" secondItem="K5a-ip-gTB" secondAttribute="centerX" id="eSd-5U-4x5"/>
+                                    <constraint firstItem="Ngh-CD-hbo" firstAttribute="top" secondItem="K5a-ip-gTB" secondAttribute="top" id="fqD-fE-FaX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ngh-CD-hbo" secondAttribute="bottom" id="lD0-4d-G8T"/>
+                                    <constraint firstItem="Ngh-CD-hbo" firstAttribute="leading" secondItem="K5a-ip-gTB" secondAttribute="leading" id="y2F-x4-FVx"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Ngh-CD-hbo" secondAttribute="bottom" id="Gdn-2U-cLT"/>
-                            <constraint firstItem="Ngh-CD-hbo" firstAttribute="leading" secondItem="sib-gn-smG" secondAttribute="leading" id="PQW-IJ-doz"/>
-                            <constraint firstAttribute="trailing" secondItem="Ngh-CD-hbo" secondAttribute="trailing" id="es5-bc-FLV"/>
-                            <constraint firstItem="Ngh-CD-hbo" firstAttribute="top" secondItem="sib-gn-smG" secondAttribute="top" id="kNa-cH-npG"/>
+                            <constraint firstAttribute="bottom" secondItem="K5a-ip-gTB" secondAttribute="bottom" id="D8d-st-haT"/>
+                            <constraint firstAttribute="trailing" secondItem="K5a-ip-gTB" secondAttribute="trailing" id="tr8-Le-4E3"/>
+                            <constraint firstItem="K5a-ip-gTB" firstAttribute="top" secondItem="sib-gn-smG" secondAttribute="top" id="uE9-0d-CLv"/>
+                            <constraint firstItem="K5a-ip-gTB" firstAttribute="leading" secondItem="sib-gn-smG" secondAttribute="leading" id="wZB-Pq-6O1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3HD-Zw-0kH"/>
                     </view>
                     <connections>
                         <outlet property="fullScreenImage" destination="Ngh-CD-hbo" id="Enk-Xa-5ym"/>
+                        <outlet property="scrollView" destination="K5a-ip-gTB" id="zEr-XM-wGK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAd-BG-COB" userLabel="First Responder" sceneMemberID="firstResponder"/>
